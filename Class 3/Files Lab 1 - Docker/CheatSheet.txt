@@ -1,0 +1,35 @@
+# try to run a command without turning on the docker engine
+
+# explain the deamon consept
+docker run hello-world
+
+# run a webservice in 2 seconds
+docker run -d -p 9090:80 nginx
+
+# enter the containers shell
+
+docker exec -it <container_id_or_name> /bin/bash
+
+# move to the index.html dir to see what it contains
+cd /usr/share/nginx/html/
+
+#create your own static website
+
+apt update
+apt install unzip
+apt insatall wget
+
+wget https://github.com/omor13/marketing_website/raw/main/marketing_website.zip
+
+sudo unzip marketing_website.zip -d /usr/share/nginx/html/
+
+#remove container
+docker rm
+
+#docker remove image forcfully
+docker rmi -f <image name>
+
+
+
+
+

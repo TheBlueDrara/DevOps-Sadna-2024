@@ -1,0 +1,80 @@
+**********************************************************************************************************************************************************
+First Create a GitHub account and Download GitBash
+
+Change directory to the folder containing your Contents
+# cd /Desktop (for example)
+
+initialize Git local repo
+# git init
+
+Add your Github credenetials so you can commit and push content to the remote repo
+
+# git config --global user.name "Your Name"
+# git config --global user.email "you@example.com"
+
+Create a Github repo and clone it locally
+# git clone <https git repo url>
+
+Create a textfile and add content
+# echo "its cold outside" >> text.txt
+
+Check its status
+# git status
+
+Add files to the staging area
+# git add .
+
+Commit your changes
+# git commit -m "added a new text file"
+
+Check the logs to see the commit history
+# git log
+
+Create a new file, script.py
+# nano text.txt
+
+stage and commit the new py file
+# git add .
+# git commit -m "added a py file"
+
+Check out to an older Hash to go back to older work
+# git log
+# git checkout <hash>
+#git ls
+
+On the main branch create another commit with a random file or change that you wish
+
+Create a new branch
+# git branch <branch name>
+
+Move to the new branch and see what branch youre currntly on
+# git checkout <branch name>
+# git branch
+
+Create a new text file on the new branch, stage and commit it
+# echo "its hot outside" >> text.txt 
+
+Go back to main branch and merge the feature branch
+# git checkout main
+# git merge feature 
+
+Fix the conflict, stage and commit the fixed file
+# nano text.txt 
+
+Add a remote repository,
+# git remote add <name the remote repo> https://github.com/yourusername/yourrepository.git
+
+See what remote repos do you have
+# git remote -v
+
+Pull the remote repo before pushing
+# git pull <remote repo> main
+
+Fix conflicts if there are any, stage and commit the fixed changes
+
+Push the changes to the remote repo
+# git push -u <remote repo name> main
+**********************************************************************************************************************************************************
+
+
+

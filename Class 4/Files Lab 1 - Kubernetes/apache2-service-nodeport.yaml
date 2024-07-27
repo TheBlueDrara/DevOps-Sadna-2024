@@ -1,0 +1,30 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: apache2-service
+spec:
+  type: NodePort
+  ports:
+  - port: 80
+    targetPort: 80
+    nodePort: 30007  
+  selector:
+    app: apache2
+
+# apiVersion: v1: Specifies the Kubernetes API version being used for this resource. In this case, it's using the v1 version of the API, which is the core API version for Kubernetes resources.
+
+# kind: Defines the kind of Kubernetes resource being created, which is a Service. Services in Kubernetes enable networking within the cluster to route traffic to Pods.
+
+# metadata: Contains metadata about the Service, including its name (apache2-service). Metadata provides information that helps uniquely identify the resource.
+
+# type: NodePort: Specifies the type of Service. NodePort makes the Service accessible on each node's IP at a specific port (NodePort) defined by Kubernetes. This allows external access to the Service.
+
+# selector: Defines which Pods the Service should target. In this case, it selects Pods with the label app: apache2. Labels are key-value pairs attached to Kubernetes resources for identification and grouping.
+
+# ports: Specifies the ports that the Service will expose.
+
+# port: 80: Specifies the port on the Service itself. Traffic sent to port 80 on the Service will be forwarded to the targetPort on the Pods.
+
+# targetPort: 80: Specifies the port on the Pod to which the Service should forward traffic. In this case, port 80 is typically where the Apache2 application within the Pods would be listening for HTTP requests.
+
+# nodePort: 30007: Specifies the port on each node's IP that the Service will be accessible from outside the cluster.

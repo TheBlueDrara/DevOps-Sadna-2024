@@ -1,0 +1,29 @@
+# New-Alias -Name k -Value kubectl
+
+
+************************************************************************************************************************************************************************************************************************
+Create a cluster using K8s in docker (Kind)
+# kind create cluster --name my-cluster
+
+Verify Cluster Creation
+# kubectl get nodes
+
+
+************************************************************************************************************************************************************************************************************************
+
+#### USE THE YAML FILES
+# kubectl apply -f apache2-deployment.yaml
+
+# kubectl apply -f apache2-service-nodeport.yaml
+
+************************************************************************************************************************************************************************************************************************
+Scale Up the Deployment
+# kubectl scale deployment <deployment-name> --replicas=<number-of-replicas>
+
+Port forward to access
+# kubectl port-forward svc/apache2-service <HostPort>:<SVC-Port>
+
+Check the labels           [Key] [Value]
+kubectl get pods --selector=app=apache2
+
+kubectl port-forward service/apache2-service 8080:80

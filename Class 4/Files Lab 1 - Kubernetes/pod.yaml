@@ -1,0 +1,32 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: nginx-pod
+spec:
+  containers:
+  - name: nginx-container
+    image: nginx
+
+  - name: nginx2
+    image: nginx
+
+  - name: nginx3
+    image: nginx
+
+#apiVersion: v1: Specifies the Kubernetes API version being used for this resource. In this case, it's using the v1 version of the API, which is the core API version for Kubernetes resources.
+
+#kind: Pod: Defines the kind of Kubernetes resource being created, which is a Pod. Pods are the smallest deployable units in Kubernetes, consisting of one or more containers.
+
+#metadata:: Contains metadata about the Pod, including its name (nginx-pod). Metadata provides information that helps uniquely identify the resource.
+
+#spec:: Specifies the desired state of the Pod, including its containers and their specifications.
+
+#containers: Specifies the containers that should be run inside the Pod.
+
+#name: nginx-container: Defines the name of the container within the Pod. In this case, the container is named nginx-container.
+
+#image: nginx: Specifies the Docker image to use for the container. In this example, it uses the official nginx Docker image from Docker Hub.
+
+
+#in this pod we created 3 containers.
+
