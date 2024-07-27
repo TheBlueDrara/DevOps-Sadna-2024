@@ -1,33 +1,77 @@
+************************************************************************************************************************************************************************************************************************
 # try to run a command without turning on the docker engine
 
 # explain the deamon consept
 docker run hello-world
 
+# download an image from Docker Hub
+docker pull ubuntu:latest
+
+#docker remove image forcfully
+docker rmi -f <image name>
+
+# check the existing containers -a, not running ones
+docker ps -a
+
+# list all local images
+docker images
+
 # run a webservice in 2 seconds
 docker run -d -p 9090:80 nginx
 
-# enter the containers shell
+# stops the container
+docker stop my-container
 
+# start the container
+docker start my-container
+
+# enter the containers shell
 docker exec -it <container_id_or_name> /bin/bash
 
 # move to the index.html dir to see what it contains
 cd /usr/share/nginx/html/
 
-#create your own static website
-
+# create your own static website, download this packages
 apt update
 apt install unzip
 apt insatall wget
-
+# run this commands to download a zip file from GitHub and unzip it
 wget https://github.com/omor13/marketing_website/raw/main/marketing_website.zip
+unzip marketing_website.zip -d /usr/share/nginx/html/
 
-sudo unzip marketing_website.zip -d /usr/share/nginx/html/
+# check the logs of the container
+docker logs my-container
 
-#remove container
+# remove container
 docker rm
+************************************************************************************************************************************************************************************************************************
+# build an image
+docker build -t <imgae-name>:<tag> .
 
-#docker remove image forcfully
-docker rmi -f <image name>
+# if specifin docker file use this:
+docker build -t <imgae-name>:<tag> -f Dockerfile.test .
+
+# Run a container using my image
+docker run -it --rm my-python-app
+************************************************************************************************************************************************************************************************************************
+# Building the Second Web-App
+docker build -t my-apache2-image -f Dockerfile.apache2 .
+
+# Run the container and expose it to host port 5000
+docker run -p 5000:80 my-apache2-image
+************************************************************************************************************************************************************************************************************************
+#log in to docker Hub
+docker login
+
+Username: your_dockerhub_username
+Password: your_dockerhub_password
+
+#push the new image to DockerHub
+docker push my-repo/my-image:latest
+
+
+
+
 
 
 
