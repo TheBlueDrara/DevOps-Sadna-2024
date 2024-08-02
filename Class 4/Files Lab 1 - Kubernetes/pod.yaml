@@ -1,16 +1,10 @@
 apiVersion: v1
 kind: Pod
 metadata:
-  name: nginx-pod
+  name: hello-class
 spec:
   containers:
-  - name: nginx-container
-    image: nginx
-
-  - name: nginx2
-    image: nginx
-
-  - name: nginx3
+  - name: nginx-container-class-test
     image: nginx
 
 #apiVersion: v1: Specifies the Kubernetes API version being used for this resource. In this case, it's using the v1 version of the API, which is the core API version for Kubernetes resources.

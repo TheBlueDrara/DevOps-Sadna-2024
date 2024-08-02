@@ -14,9 +14,10 @@ spec:
     spec:
       containers:
       - name: apache2-container
-        image: thebluedrara/apache2-image:latest
+        image: httpd:latest
         ports:
         - containerPort: 80
+
 
 # spec: the specs of the deployment
 # replicas: the amount of identical pods it will create

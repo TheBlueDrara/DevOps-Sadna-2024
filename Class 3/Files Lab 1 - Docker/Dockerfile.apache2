@@ -12,7 +12,7 @@ RUN wget https://github.com/omor13/marketing_website/raw/main/marketing_website.
     rm marketing_website.zip
 
 # Expose port 5000
-EXPOSE 5000
+EXPOSE 80
 
 # Run Apache in the foreground
 CMD ["apache2ctl", "-D", "FOREGROUND"]

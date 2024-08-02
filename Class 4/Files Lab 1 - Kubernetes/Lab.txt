@@ -1,0 +1,51 @@
+# New-Alias -Name k -Value kubectl
+
+
+************************************************************************************************************************************************************************************************************************
+Create a cluster using K8s in Docker Desktop
+
+Verify Cluster Creation
+# kubectl get nodes
+************************************************************************************************************************************************************************************************************************
+
+#### USE THE YAML FILES
+# kubectl apply -f pod.yaml
+
+List all the pods in default namespace
+# kubectl get pods
+
+List all the pods in specific namespace
+# kubectl get pods -n <name-space>
+
+Get info about a pod
+# kubectl get pod <pod-name> -o yaml >> text.yaml 
+
+Delete pods
+# kubectl delete pods <pod name>
+
+Create namespace dev
+# kubectl create namespace <name of the space>
+
+List the namesapces
+# kubectl get namespaces
+
+Create a deployment
+# kubectl apply -f apache2-deployment.yaml
+
+List the deployment
+# kubectl get deployments
+
+Create a service
+# kubectl apply -f apache2-service-nodeport.yaml
+
+List all the service
+# kubectl get service
+
+create an app from one manifest 
+# kubectl apple -f nginx-app.yaml
+************************************************************************************************************************************************************************************************************************
+Scale Up the Deployment and do a Rollout
+change the apache2-deployment.yaml replicas for more pods
+Reapply the file and see how new pods come Up
+
+

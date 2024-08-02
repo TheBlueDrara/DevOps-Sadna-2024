@@ -1,7 +1,7 @@
 ************************************************************************************************************************************************************************************************************************
 # try to run a command without turning on the docker engine
 
-# explain the deamon consept
+# explain the deamon consept (dockered)
 docker run hello-world
 
 # download an image from Docker Hub
